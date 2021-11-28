@@ -40,7 +40,8 @@ if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] === "ok"){
 
     if(isset($_GET["ruta"])) {
         if ($_GET["ruta"]== "inicio" ||
-            $_GET["ruta"]== "inventario") {
+            $_GET["ruta"]== "inventario" ||
+            $_GET["ruta"]== "salir") {
             
             include "modulos/".$_GET["ruta"].".php";
 
