@@ -19,4 +19,30 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="categorias" class="nav-link">
+              <i class="nav-icon fas fa-list-ul"></i>
+              <p>
+                Categorias
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tamanos" class="nav-link">
+              <i class="nav-icon fas fa-text-height"></i>
+              <p>
+                Tamaños
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="perfiles" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Perfiles
+              </p>
+            </a>
+          </li>
         </ul>

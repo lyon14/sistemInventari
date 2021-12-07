@@ -23,6 +23,10 @@ session_start();
   <link rel="stylesheet" href="vistas/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="vistas/dist/css/adminlte.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="vistas/plugins/toastr/toastr.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="vistas/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   
 </head>
 
@@ -41,6 +45,9 @@ if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] === "ok"){
     if(isset($_GET["ruta"])) {
         if ($_GET["ruta"]== "inicio" ||
             $_GET["ruta"]== "inventario" ||
+            $_GET["ruta"]== "categorias" ||
+            $_GET["ruta"]== "tamanos" ||
+            $_GET["ruta"]== "perfiles" ||
             $_GET["ruta"]== "salir") {
             
             include "modulos/".$_GET["ruta"].".php";
@@ -85,7 +92,12 @@ if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] === "ok"){
 <script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="vistas/dist/js/adminlte.min.js"></script>
-<script src="vistas/js/gestorProductos.js"></script>
+<!-- SweetAlert2 -->
+<script src="vistas/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="vistas/plugins/toastr/toastr.min.js"></script>
+
+<script src="vistas/js/gestorInventario.js"></script>
 
 </body>
 </html>
