@@ -1,5 +1,5 @@
-$(".tablaCategorias").DataTable({
-  ajax: "ajax/tablaCategorias.ajax.php",
+$(".tablaTamanos").DataTable({
+  ajax: "ajax/tablaTamanos.ajax.php",
   deferRender: true,
   retrieve: true,
   processing: true,
@@ -30,15 +30,15 @@ $(".tablaCategorias").DataTable({
   },
 });
 
-$(".tablaCategorias tbody").on("click", ".btnEditarCategoria", function () {
-  var idCategorias = $(this).attr("idCategorias");
+$(".tablaTamanos tbody").on("click", ".btnEditarTamanos", function () {
+  var idTamanos = $(this).attr("idTamanos");
 
   var datos = new FormData();
 
-  datos.append("idCategorias", idCategorias);
+  datos.append("idTamanos", idTamanos);
 
   $.ajax({
-    url: "ajax/categorias.ajax.php",
+    url: "ajax/tamanos.ajax.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -46,20 +46,21 @@ $(".tablaCategorias tbody").on("click", ".btnEditarCategoria", function () {
     processData: false,
     dataType: "json",
     success: function (respuesta) {
-      $("#modalEditarCategoria .idCategorias").val(respuesta["id"]);
-      $("#modalEditarCategoria .categoria").val(respuesta["categoria"]);
+      $("#modalEditarTamanos .idTamano").val(respuesta["id"]);
+      $("#modalEditarTamanos .tamano").val(respuesta["tamano"]);
     },
   });
 });
 
-$(".tablaCategorias tbody").on("click", ".btnEliminarCategoria", function () {
-  var idCategorias = $(this).attr("idCategorias");
+$(".tablaTamanos tbody").on("click", ".btnEliminarTamanos", function () {
+  var idTamanos = $(this).attr("idTamanos");
 
   var datos = new FormData();
-  datos.append("idCategorias", idCategorias);
+  
+  datos.append("idTamanos", idTamanos);
 
   $.ajax({
-    url: "ajax/categorias.ajax.php",
+    url: "ajax/tamanos.ajax.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -67,7 +68,7 @@ $(".tablaCategorias tbody").on("click", ".btnEliminarCategoria", function () {
     processData: false,
     dataType: "json",
     success: function (respuesta) {
-      $("#modalEliminarCategoria .idCategoria").val(respuesta["id"]);
+      $("#modalEliminarTamanos .idTamano").val(respuesta["id"]);
     },
   });
 });
