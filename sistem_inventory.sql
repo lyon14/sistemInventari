@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2021 a las 04:25:12
+-- Tiempo de generación: 10-12-2021 a las 21:32:51
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -60,7 +60,12 @@ CREATE TABLE `categorias` (
 INSERT INTO `categorias` (`id`, `categoria`) VALUES
 (1, 'Bebida'),
 (2, 'Bebidas Alcohólicas '),
-(3, 'Comestibles');
+(3, 'Comestibles'),
+(5, 'hola'),
+(8, 'pedosd'),
+(10, 'jabones'),
+(14, 'vino'),
+(15, 'pisco');
 
 -- --------------------------------------------------------
 
@@ -83,36 +88,35 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `codigo`, `precio`, `stock`, `id_categoria`, `id_tamano`) VALUES
-(1, 'Coca cola', '123', 1000, 14, 1, 1),
-(2, 'Coca cola', '123', 2000, 20, 1, 5),
-(3, 'Sprite', '123', 1000, 20, 1, 1),
-(4, 'Fanta ', '123', 1500, 15, 1, 2),
-(5, 'Sprite ', '123', 2500, 15, 1, 4),
-(6, 'Cerveza Cristal', '123', 1500, 50, 2, 1),
-(7, 'Ron Barceló', '123', 20000, 10, 2, 1),
-(8, 'Ron Havana Club', '123', 9000, 15, 2, 1),
-(9, 'Papas fritas Lays', '123', 1000, 50, 3, 7),
-(10, 'Galletas Cuqui', '123', 850, 50, 3, 10),
-(11, 'Coca cola', '123', 1500, 20, 1, 2),
-(12, 'Pisco Alto Del Carmen', '123', 6000, 20, 2, 1),
-(13, 'Pisco Mistral 35°', '123', 5000, 25, 2, 1),
-(14, 'Pisco Mistral 40° Premium', '123', 15000, 15, 2, 2),
-(15, 'Whisky Jack Daniel\'s 40°', '123', 15000, 15, 2, 1),
-(16, 'Pepsi', '123', 1500, 50, 1, 1),
-(17, 'Coca cola light', '123', 1000, 50, 1, 1),
-(18, 'Coca cola light', '123', 1500, 25, 1, 3),
-(19, 'Coca cola light', '123', 2000, 20, 1, 5),
-(20, 'Galletas Frac sabor chocolate', '123', 450, 25, 3, 10),
-(21, 'Galletas Frac sabor clasica', '123', 450, 25, 3, 10),
-(22, 'Galletas Frac sabor vainilla ', '123', 450, 25, 3, 10),
-(23, 'Galletas triton sabor vainilla', '123', 550, 25, 3, 10),
-(24, 'Galletas triton sabor naranja', '123', 550, 15, 3, 10),
-(25, 'Galletas triton sabor chocolate', '123', 550, 15, 3, 10),
-(26, 'Fanta ', '123', 1500, 20, 1, 2),
-(27, 'Fanta ', '123', 2000, 20, 1, 5),
-(28, 'Nordic ', '123', 1000, 15, 1, 1),
-(29, 'Nordic', '123', 1500, 15, 1, 2),
-(30, 'Nordic', '123', 2000, 15, 1, 5);
+(1, 'Coca cola', '123', 1000, 164, 1, 1),
+(4, 'Fanta ', '123', 1500, 43, 1, 2),
+(5, 'Sprite ', '123', 2500, 13, 1, 4),
+(8, 'Ron Havana Club', '123', 9000, 13, 2, 1),
+(9, 'Papas fritas Lays', '123', 1000, 48, 3, 7),
+(10, 'Galletas Cuqui', '123', 850, 48, 3, 10),
+(11, 'Coca cola', '123', 1500, 18, 1, 2),
+(12, 'Pisco Alto Del Carmen', '123', 6000, 18, 2, 1),
+(13, 'Pisco Mistral 35°', '123', 5000, 23, 2, 1),
+(14, 'Pisco Mistral 40° Premium', '123', 15000, 13, 2, 2),
+(15, 'Whisky Jack Daniel\'s 40°', '123', 15000, 13, 2, 1),
+(16, 'Pepsi', '123', 1500, 48, 1, 1),
+(17, 'Coca cola light', '123', 1000, 48, 1, 1),
+(18, 'Coca cola light', '123', 1500, 23, 1, 3),
+(19, 'Coca cola light', '123', 2000, 18, 1, 5),
+(20, 'Galletas Frac sabor chocolate', '123', 450, 23, 3, 10),
+(21, 'Galletas Frac sabor clasica', '123', 450, 23, 3, 10),
+(22, 'Galletas Frac sabor vainilla ', '123', 450, 23, 3, 10),
+(23, 'Galletas triton sabor vainilla', '123', 550, 23, 3, 10),
+(24, 'Galletas triton sabor naranja', '123', 550, 13, 3, 10),
+(25, 'Galletas triton sabor chocolate', '123', 550, 13, 3, 10),
+(26, 'Fanta ', '123', 1500, 18, 1, 2),
+(27, 'Fanta ', '123', 2000, 18, 1, 5),
+(28, 'Nordic ', '123', 1000, 13, 1, 1),
+(30, 'Nordic', '123', 2000, 13, 1, 5),
+(31, 'bon o bon', '7802225640770', 1000, 11, 3, 7),
+(41, 'chelita', '12312312', 1000, 123, 1, 1),
+(42, 'tu mamita', '7802225640773', 2000, 23, 2, 5),
+(63, 'triton vainilla', '7802230086952', 1000, 25, 3, 10);
 
 -- --------------------------------------------------------
 
@@ -141,7 +145,9 @@ INSERT INTO `tamanos` (`id`, `tamano`) VALUES
 (9, '150 gr'),
 (10, '120 gr'),
 (11, '100 gr'),
-(12, '50 gr');
+(12, '50 gr'),
+(15, '40 lt'),
+(16, '2 kl');
 
 --
 -- Índices para tablas volcadas
@@ -187,19 +193,19 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT de la tabla `tamanos`
 --
 ALTER TABLE `tamanos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
