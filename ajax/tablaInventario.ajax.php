@@ -18,7 +18,7 @@ class TablaInventario
             $acciones = "<button class='btn btn-app bg-success btnEditarProducto' data-toggle='modal' idProducto='" . $productos[$i]["id"] . "' data-target='#modalEditarProducto'><i class='fas fa-edit'></i>Editar</button><button class='btn btn-app bg-warning btnSumarStock' data-toggle='modal' idProducto='" . $productos[$i]["id"] . "' data-target='#modalSumarProducto'><i class='fas fa-plus-square'></i>Sumar</button><button class='btn btn-app bg-danger btnEliminarProducto' data-toggle='modal' idProducto='" . $productos[$i]["id"] . "' data-target='#modalEliminarProducto'><i class='far fa-trash-alt'></i>Eliminar</button>";
 
             $datosJson .= '[
-                "' . $productos[$i]["id"] . '",
+                "' . ($i + 1) . '",
                 "' . $productos[$i]["nombre"] . '",
                 "' . $productos[$i]["codigo"] . '",
                 "' . $productos[$i]["categoria"] . '",
