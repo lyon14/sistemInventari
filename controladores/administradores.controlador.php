@@ -133,7 +133,7 @@ class ControladorPerfiles
     static public function ctrEliminarPerfil()
     {
 
-        if (isset($_POST["idPerfiles"])) {
+        if (isset($_POST["button_EliminarPerfiles"])) {
 
             $tabla = "administradores";
             $datos = $_POST["idPerfiles"];
