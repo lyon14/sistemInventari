@@ -102,6 +102,7 @@ if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] === "ok"){
 <script src="vistas/js/gestorInventario.js"></script>
 <script src="vistas/js/gestorCategorias.js"></script>
 <script src="vistas/js/gestorTamanos.js"></script>
+<script src="vistas/js/gestorPerfiles.js"></script>
 
 </body>
 </html>
